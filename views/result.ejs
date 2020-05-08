@@ -1,0 +1,43 @@
+<link  rel="stylesheet"  href="app.css"  >
+
+
+<h1 class="dam">
+	RESULT PAGE
+</h1>
+<div id="want">
+<% data["data"][0]["table"].forEach(function(cod){ %>
+	<%   if((cod["state"].toLowerCase() === test.toLowerCase()) || (cod["statecode"].toLowerCase() === test.toLowerCase() )  ){  %>
+		<p>
+			<strong>
+				<%= cod["state"];  %>
+			</strong> has the
+		</p>
+		<p>
+			ACTIVE cases are:
+			<%= cod["active"]; %>
+		</p>
+		<p>
+			CONFIRM cases are:
+			<%= cod["confirmed"]; %>
+		</p>
+		<p>
+			DEATHS in this state is :
+			<%= cod["deaths"]; %>
+		</p>
+		<p>
+			RECOVERED in this state is :
+			<%= cod["recovered"];  %>
+		</p>
+
+		<% } %>
+			<% });  %>
+
+				<button>
+					<a href="/">
+						Search Again
+					</a>
+				</button>
+	<h2 class="dam">
+		MADE BY AYUSHMAN
+	</h2>
+</div>
